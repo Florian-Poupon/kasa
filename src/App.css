@@ -1,0 +1,61 @@
+.App {
+  min-height: 100vh;
+  background-color: #242424;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.navigation {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem 0;
+  border-bottom: 1px solid #646cff;
+}
+.navigation ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+.navigation ul li a {
+  color: rgba(255, 255, 255, 0.87);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.navigation ul li a:hover {
+  color: #646cff;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding: 2rem 0;
+}
+.main-content .home,
+.main-content .about {
+  text-align: center;
+}
+.main-content .home h1,
+.main-content .about h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #646cff;
+}
+.main-content .home p,
+.main-content .about p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.main-content .home ul,
+.main-content .about ul {
+  list-style: none;
+  padding: 0;
+}
+.main-content .home ul li,
+.main-content .about ul li {
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+}/*# sourceMappingURL=App.css.map */
