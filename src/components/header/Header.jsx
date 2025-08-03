@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
-function Navigation() {
+function Header() {
   return (
     <nav className="navigation">
       <ul>
@@ -17,4 +17,4 @@ function Navigation() {
   );
 }
 
-export default Navigation;
+export default Header;
