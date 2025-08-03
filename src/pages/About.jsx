@@ -1,18 +1,12 @@
-import React from 'react';
+import React from "react";
+import Section_header from "../components/section_header/Section_header";
 
 function About() {
   return (
-    <div className="about">
-      <h1>À propos</h1>
-      <p>Cette application a été créée avec :</p>
-      <ul>
-        <li>React</li>
-        <li>Vite</li>
-        <li>React Router</li>
-        <li>Sass</li>
-      </ul>
-    </div>
+    <section className="about">
+      <Section_header titre="" image="about" />
+    </section>
   );
 }
 
-export default About; 
+export default About;

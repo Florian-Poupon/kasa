@@ -32,7 +32,6 @@
   align-items: center;
   width: 100%;
   background-color: #000000;
-  width: 100%;
   box-sizing: border-box;
 }
 .footer__footer_container {
@@ -40,11 +39,72 @@
   align-items: center;
   width: 100%;
   flex-direction: column;
-  width: 100%;
   max-width: 1440px;
   gap: 1rem;
   padding: 3rem;
   color: white;
+}
+
+.section__header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  min-height: 223px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  border-radius: 25px;
+  justify-content: center;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.section__header__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  border-radius: 25px;
+}
+.section__header h2 {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  margin: 0;
+  padding: 1.5rem 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 0 auto;
+  width: 100%;
+  background-color: #f6f6f6;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.card {
+  aspect-ratio: 1;
+  background: linear-gradient(to bottom, #ff6060 0%, #cc4d4d 100%);
+  border-radius: 10px;
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.card h3 {
+  margin: 0;
 }
 
 html,
@@ -73,15 +133,29 @@ body {
   width: 100%;
   flex-direction: column;
   width: 100%;
+  min-height: 100vh;
 }
 
 main {
   display: flex;
-  height: 100%;
   flex-grow: 1;
   max-width: 1440px;
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
+  padding: 0 2rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   padding: 2rem;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
 }/*# sourceMappingURL=App.css.map */

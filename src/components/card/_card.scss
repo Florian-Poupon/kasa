@@ -1,0 +1,26 @@
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $gap-sm;
+  margin: 0 auto;
+  width: 100%;
+  background-color: $section-color;
+  box-sizing: border-box;
+  border-radius: $border-radius-sm;
+  padding: $padding;
+}
+
+.card {
+  aspect-ratio: 1;
+  background: $main-gradient;
+  border-radius: $border-radius-sm;
+  color: $text-light;
+  padding: $padding;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+
+  h3 {
+    margin: 0;
+  }
+}

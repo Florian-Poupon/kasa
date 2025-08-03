@@ -1,0 +1,35 @@
+.section__header {
+  @include flex-center;
+  position: relative;
+  min-height: 223px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  border-radius: $border-radius;
+  justify-content: center;
+  box-shadow: $shadow;
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1; // ← pour s’assurer qu’il est au-dessus du background
+    border-radius: $border-radius;
+  }
+
+  h2 {
+    position: relative;
+    z-index: 2; // ← pour que le titre soit au-dessus de l’overlay
+    color: #fff; // ← le texte reste visible sur fond sombre
+    margin: 0;
+    padding: 1.5rem 2rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+}

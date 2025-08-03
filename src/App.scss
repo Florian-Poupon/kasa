@@ -5,6 +5,8 @@
 // Composants
 @import "./components/header/header";
 @import "./components/footer/footer";
+@import "./components/section_header/section_header";
+@import "./components/card/card";
 
 // Reset / base
 html,
@@ -29,15 +31,29 @@ body {
   @include flex-center;
   flex-direction: column;
   width: 100%;
+  min-height: 100vh;
 }
 
 main {
   display: flex;
-  height: 100%;
   flex-grow: 1;
   max-width: $maxwidth;
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
+  padding: 0 $padding;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   padding: $padding;
+}
+
+// pages
+
+.home {
+  @include flex-center;
+  gap: $gap;
 }
