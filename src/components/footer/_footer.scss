@@ -1,0 +1,16 @@
+.footer {
+  @include flex-center;
+  background-color: $footer-color;
+  width: 100%;
+  box-sizing: border-box;
+
+  &__footer_container {
+    @include flex-center;
+    flex-direction: column;
+    width: 100%;
+    max-width: $maxwidth;
+    gap: $gap-sm;
+    padding: $padding-lg;
+    color: $text-light;
+  }
+}

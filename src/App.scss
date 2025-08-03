@@ -1,13 +1,43 @@
-// /imports
+// Variables & mixins
 @import "./styles/variables_config";
 @import "./styles/mixins";
 
+// Composants
 @import "./components/header/header";
+@import "./components/footer/footer";
 
-// Styles de base
+// Reset / base
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  @include flex-center;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.5;
+  background-color: $background-color;
+}
+
+#root {
+  @include flex-center;
+  flex-direction: column;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  height: 100%;
+  flex-grow: 1;
+  max-width: $maxwidth;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding: $padding;
 }
