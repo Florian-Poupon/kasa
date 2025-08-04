@@ -45,7 +45,7 @@
   color: white;
 }
 
-.section__header {
+.banner {
   display: flex;
   align-items: center;
   width: 100%;
@@ -60,7 +60,7 @@
   justify-content: center;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
-.section__header__overlay {
+.banner__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -70,7 +70,7 @@
   z-index: 1;
   border-radius: 25px;
 }
-.section__header h2 {
+.banner h2 {
   position: relative;
   z-index: 2;
   color: #fff;
@@ -81,30 +81,67 @@
   letter-spacing: 1px;
 }
 
-.cardsGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  margin: 0 auto;
-  width: 100%;
-  background-color: #f6f6f6;
-  box-sizing: border-box;
-  border-radius: 10px;
-  padding: 2rem;
-}
-
 .card {
+  position: relative;
   aspect-ratio: 1;
-  background: linear-gradient(to bottom, #ff6060 0%, #cc4d4d 100%);
-  border-radius: 10px;
   color: white;
+  border-radius: 10px;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: end;
+  background-size: cover;
+  background-position: center;
+}
+.card__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(10, 10, 10, 0), rgba(4, 4, 4, 0.41), rgb(0, 0, 0));
+  border-radius: 10px;
 }
 .card h3 {
+  position: relative;
   margin: 0;
+  font-size: 18px;
+}
+
+.dropdown {
+  width: 100%;
+  background: rgba(246, 246, 246, 0.4509803922);
+  border-radius-top: 10px;
+}
+.dropdown .dropdown__toggle {
+  background-color: #ff6060;
+  color: white;
+  display: flex;
+  padding: 10px 20px 10px 15px;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  width: 100%;
+  justify-content: space-between;
+  font-weight: bold;
+  transition: color 0.2s;
+  border-radius: 5px;
+}
+.dropdown .dropdown__arrow {
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+.dropdown .dropdown__arrow.open {
+  transform: rotate(180deg);
+}
+.dropdown .dropdown__content {
+  width: 100%;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 0 0 10px 10px;
+}
+.dropdown .dropdown__inner {
+  padding: 1rem;
 }
 
 html,
@@ -151,6 +188,11 @@ section {
   flex-direction: column;
   width: 100%;
   padding: 2rem;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
 }
 
 .home {
@@ -158,4 +200,68 @@ section {
   align-items: center;
   width: 100%;
   gap: 2rem;
+}
+.home h2 {
+  font-size: 48px;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black, 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 0 auto;
+  width: 100%;
+  background-color: rgba(246, 246, 246, 0.4509803922);
+  box-sizing: border-box;
+  border-radius: 25px;
+  padding: 2rem;
+}
+
+.valors-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+.valors-container__valor {
+  width: 80%;
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 60vh;
+  text-align: center;
+  padding: 2rem;
+}
+.error__container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+.error__title {
+  font-size: 288px;
+  font-weight: 700;
+  color: #ff6060;
+  margin: 0;
+  line-height: 1;
+}
+.error__message {
+  font-size: 36px;
+  color: #ff6060;
+  margin: 0;
+  line-height: 1.4;
+  font-weight: 500;
+}
+.error__link {
+  color: black;
+  text-decoration: underline;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
 }/*# sourceMappingURL=App.css.map */

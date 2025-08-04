@@ -5,9 +5,9 @@
 // Composants
 @import "./components/header/header";
 @import "./components/footer/footer";
-@import "./components/section_header/section_header";
+@import "./components/banner/banner";
 @import "./components/card/card";
-
+@import "./components/dropdown/dropdown";
 // Reset / base
 html,
 body,
@@ -49,11 +49,81 @@ section {
   flex-direction: column;
   width: 100%;
   padding: $padding;
+  box-sizing: border-box;
 }
 
-// pages
+a {
+  text-decoration: none;
+}
 
+// home
 .home {
   @include flex-center;
   gap: $gap;
+
+  h2 {
+    font-size: 48px;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black, $shadow;
+  }
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $gap-sm;
+  margin: 0 auto;
+  width: 100%;
+  background-color: $section-color;
+  box-sizing: border-box;
+  border-radius: $border-radius;
+  padding: $padding;
+}
+
+// about
+.valors-container {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+  align-items: center;
+  &__valor {
+    width: 80%;
+  }
+}
+// error
+.error {
+  @include flex-center;
+  min-height: 60vh;
+  text-align: center;
+  padding: $padding;
+
+  &__container {
+    @include flex-center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: $gap;
+  }
+
+  &__title {
+    font-size: 288px;
+    font-weight: 700;
+    color: $main-color;
+    margin: 0;
+    line-height: 1;
+  }
+
+  &__message {
+    font-size: 36px;
+    color: $main-color;
+    margin: 0;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+  &__link {
+    color: $text-dark;
+    text-decoration: underline;
+    border-radius: $border-radius;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
 }

@@ -4,11 +4,10 @@ $maxwidth: 1440px;
 // Back Colors
 
 $main-color: #ff6060;
-$main-gradient: linear-gradient(to bottom, $main-color 0%, #cc4d4d 100%);
-$main-gradient-reverse: linear-gradient(to bottom, #cc4d4d 0%, $main-color 100%);
+$main-gradient: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(10, 10, 10, 0), rgba(4, 4, 4, 0.41), rgba(0, 0, 0, 1));
 
 $background-color: #ffffff;
-$section-color: #f6f6f6;
+$section-color: #f6f6f673;
 $footer-color: #000000;
 
 // Text Colors
@@ -27,5 +26,6 @@ $gap: 2rem;
 $padding: 2rem;
 $padding-lg: 3rem;
 
+$border-radius-xs: 5px;
 $border-radius-sm: 10px;
 $border-radius: 25px;

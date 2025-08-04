@@ -1,0 +1,36 @@
+.dropdown {
+  width: 100%;
+  background: $section-color;
+  border-radius-top: $border-radius-sm;
+
+  .dropdown__toggle {
+    background-color: $main-color;
+    color: $text-light;
+    display: flex;
+    padding: 10px 20px 10px 15px;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    width: 100%;
+    justify-content: space-between;
+    font-weight: bold;
+    transition: color 0.2s;
+    border-radius: $border-radius-xs;
+  }
+  .dropdown__arrow {
+    transition: transform 0.3s;
+    cursor: pointer;
+    &.open {
+      transform: rotate(180deg);
+    }
+  }
+  .dropdown__content {
+    width: 100%;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 0 0 10px 10px;
+  }
+  .dropdown__inner {
+    padding: 1rem;
+  }
+}
