@@ -1,0 +1,45 @@
+.slider {
+  position: relative;
+  width: 100%;
+  height: 415px;
+  overflow: hidden;
+
+  &__image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__buttons {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    position: absolute;
+    padding: $padding-sm;
+    box-sizing: border-box;
+
+    button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      color: $text-light;
+      text-shadow: $shadow;
+    }
+  }
+
+  &__counter {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    color: $text-light;
+    text-shadow: $shadow;
+    padding: $padding-sm;
+    box-sizing: border-box;
+  }
+}
