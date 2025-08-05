@@ -9,6 +9,7 @@
 @import "./components/card/card";
 @import "./components/dropdown/dropdown";
 @import "./components/slider/slider";
+@import "./components/rating/rating";
 // Reset / base
 html,
 body,
@@ -126,5 +127,91 @@ a {
     border-radius: $border-radius;
     font-weight: 500;
     transition: background-color 0.3s ease;
+  }
+}
+
+// page logement
+.logement {
+  width: 100%;
+  padding-bottom: $padding;
+  &__infos {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+    gap: $gap;
+    padding-bottom: $padding;
+
+    &__left,
+    &__right {
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      gap: $gap-sm;
+      width: calc(50% - #{$padding-sm});
+    }
+
+    &__right {
+      align-items: end;
+    }
+
+    // left content
+
+    &__title-container {
+      line-height: 1;
+    }
+    &__title {
+      font-size: 36px;
+      color: $main-color;
+      font-weight: 500;
+    }
+    &location {
+    }
+    &__tags {
+      display: flex;
+      gap: $gap-sm;
+      button {
+        border-radius: 10px;
+        font-size: 14px;
+        height: 25px;
+        min-width: 115px;
+        padding: 0 $padding-sm;
+        font-style: bold;
+        font-weight: 700;
+        color: $text-light;
+        background-color: $main-color;
+        border: none;
+      }
+    }
+    // right content
+
+    &__host {
+      display: flex;
+      align-items: center;
+      gap: $gap-xs;
+      padding-top: $padding-sm;
+
+      p {
+        text-align: right;
+        color: $main-color;
+      }
+      img {
+        border-radius: 100%;
+        width: 64px;
+        height: 64px;
+        margin-left: $padding-sm;
+      }
+    }
+  }
+
+  .equippments {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+  }
+
+  //
+  .dropdown__toggle {
+    font-size: 18px;
   }
 }
