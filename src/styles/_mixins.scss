@@ -17,3 +17,9 @@
   margin: 0 auto;
   padding: 0;
 }
+
+@mixin breakpoint-mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}

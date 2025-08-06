@@ -2,14 +2,6 @@
 @import "./styles/variables_config";
 @import "./styles/mixins";
 
-// Composants
-@import "./components/header/header";
-@import "./components/footer/footer";
-@import "./components/banner/banner";
-@import "./components/card/card";
-@import "./components/dropdown/dropdown";
-@import "./components/slider/slider";
-@import "./components/rating/rating";
 // Reset / base
 html,
 body,
@@ -43,7 +35,10 @@ main {
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
-  padding: 0 $padding;
+
+  @include breakpoint-mobile {
+    padding-top: 0;
+  }
 }
 
 section {
@@ -63,6 +58,11 @@ a {
   @include flex-center;
   gap: $gap;
 
+  @include breakpoint-mobile {
+    padding: $padding-sm;
+    gap: $gap-sm;
+  }
+
   h2 {
     font-size: 48px;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black, $shadow;
@@ -79,6 +79,13 @@ a {
   box-sizing: border-box;
   border-radius: $border-radius;
   padding: $padding;
+
+  @include breakpoint-mobile {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: $gap-sm;
+  }
 }
 
 // about
@@ -215,3 +222,12 @@ a {
     font-size: 18px;
   }
 }
+
+// Composants
+@import "./components/header/header";
+@import "./components/footer/footer";
+@import "./components/banner/banner";
+@import "./components/card/card";
+@import "./components/dropdown/dropdown";
+@import "./components/slider/slider";
+@import "./components/rating/rating";

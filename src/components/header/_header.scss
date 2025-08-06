@@ -5,8 +5,17 @@
   gap: $gap;
   box-sizing: border-box;
 
+  @include breakpoint-mobile {
+    padding: $padding-sm;
+    gap: $gap-sm;
+    padding-bottom: 0;
+  }
+
   &__logo {
     width: 210px;
+    @include breakpoint-mobile {
+      width: 145px;
+    }
   }
 }
 
@@ -16,6 +25,12 @@
     display: flex;
     list-style: none;
     gap: $gap;
+    padding: 0;
+
+    @include breakpoint-mobile {
+      gap: $gap-sm;
+      width: 100%;
+    }
 
     li {
       .nav-link {
@@ -23,6 +38,10 @@
         color: $text-dark;
         font-weight: 500;
         font-size: 24px;
+
+        @include breakpoint-mobile {
+          font-size: 18px;
+        }
 
         &.a--active {
           text-decoration: underline;

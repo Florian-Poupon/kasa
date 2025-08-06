@@ -11,6 +11,12 @@
   justify-content: center;
   box-shadow: $shadow;
 
+  @include breakpoint-mobile {
+    min-height: 110px;
+    height: 100%;
+    box-shadow: none;
+  }
+
   &__overlay {
     position: absolute;
     top: 0;
@@ -24,12 +30,17 @@
 
   h2 {
     position: relative;
-    z-index: 2; // ← pour que le titre soit au-dessus de l'overlay
-    color: #fff; // ← le texte reste visible sur fond sombre
+    z-index: 2;
+    color: #fff;
     margin: 0;
     padding: 1.5rem 2rem;
     font-size: 2.5rem;
     font-weight: 700;
-    letter-spacing: 1px;
+
+    @include breakpoint-mobile {
+      font-size: 24px;
+      line-height: 24px;
+      text-shadow: $shadow;
+    }
   }
 }
