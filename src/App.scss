@@ -129,6 +129,11 @@ a {
     flex-direction: column;
     justify-content: space-evenly;
     gap: $gap;
+
+    @include breakpoint-mobile {
+      height: 100%;
+      justify-content: space-evenly;
+    }
   }
 
   &__title {
@@ -137,6 +142,10 @@ a {
     color: $main-color;
     margin: 0;
     line-height: 1;
+
+    @include breakpoint-mobile {
+      font-size: 96px;
+    }
   }
 
   &__message {
@@ -145,6 +154,10 @@ a {
     margin: 0;
     line-height: 1.4;
     font-weight: 500;
+
+    @include breakpoint-mobile {
+      font-size: 18px;
+    }
   }
 
   &__link {
@@ -153,6 +166,10 @@ a {
     border-radius: $border-radius;
     font-weight: 500;
     transition: background-color 0.3s ease;
+
+    @include breakpoint-mobile {
+      font-size: 14px;
+    }
   }
 }
 

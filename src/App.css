@@ -135,12 +135,23 @@ a {
   justify-content: space-evenly;
   gap: 2rem;
 }
+@media (max-width: 768px) {
+  .error__container {
+    height: 100%;
+    justify-content: space-evenly;
+  }
+}
 .error__title {
   font-size: 288px;
   font-weight: 700;
   color: #ff6060;
   margin: 0;
   line-height: 1;
+}
+@media (max-width: 768px) {
+  .error__title {
+    font-size: 96px;
+  }
 }
 .error__message {
   font-size: 36px;
@@ -149,12 +160,22 @@ a {
   line-height: 1.4;
   font-weight: 500;
 }
+@media (max-width: 768px) {
+  .error__message {
+    font-size: 18px;
+  }
+}
 .error__link {
   color: black;
   text-decoration: underline;
   border-radius: 25px;
   font-weight: 500;
   transition: background-color 0.3s ease;
+}
+@media (max-width: 768px) {
+  .error__link {
+    font-size: 14px;
+  }
 }
 
 .logement {
