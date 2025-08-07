@@ -2,7 +2,11 @@
   position: relative;
   width: 100%;
   height: 415px;
-  overflow: hidden;
+  // overflow: hidden;
+
+  @include breakpoint-mobile {
+    height: 255px;
+  }
 
   &__image {
     object-fit: cover;
@@ -11,14 +15,11 @@
   }
 
   &__navigation {
+    position: absolute;
     display: flex;
     width: 100%;
     height: 100%;
-    align-items: center;
-    align-content: center;
     justify-content: space-between;
-    position: absolute;
-    padding: $padding-sm;
     box-sizing: border-box;
 
     button {
@@ -27,19 +28,28 @@
       cursor: pointer;
       color: $text-light;
       text-shadow: $shadow;
+      padding: $padding-xs;
+      img {
+        @include breakpoint-mobile {
+          padding: 0;
+          height: 20px;
+          width: auto;
+        }
+      }
     }
   }
-
   &__counter {
     position: absolute;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
     bottom: 0;
     width: 100%;
     color: $text-light;
     text-shadow: $shadow;
-    padding: $padding-sm;
-    box-sizing: border-box;
+    padding-bottom: $padding-sm;
+
+    @include breakpoint-mobile {
+      font-size: 14px;
+    }
   }
 }

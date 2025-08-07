@@ -12,14 +12,9 @@
     outline: none;
     width: 100%;
     justify-content: space-between;
-    font-size: 24px;
     font-weight: bold;
     transition: color 0.2s;
     border-radius: $border-radius-xs;
-
-    @include breakpoint-mobile {
-      font-size: 18px;
-    }
   }
   .dropdown__arrow {
     transition: transform 0.3s;
@@ -35,6 +30,19 @@
     border-radius: 0 0 10px 10px;
   }
   .dropdown__inner {
-    padding: 1rem;
+    padding: $padding-xs;
+    font-size: 18px;
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    @include breakpoint-mobile {
+      font-size: 12px;
+    }
   }
 }

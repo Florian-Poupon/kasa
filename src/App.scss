@@ -94,6 +94,13 @@ a {
     padding: $padding-sm;
     gap: $gap-sm;
   }
+  .dropdown__toggle {
+    font-size: 24px;
+
+    @include breakpoint-mobile {
+      font-size: 13px;
+    }
+  }
 }
 
 .valors-container {
@@ -174,6 +181,16 @@ a {
 }
 
 // page logement
+.logement-page {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  @include breakpoint-mobile {
+    align-items: center;
+    padding-top: $padding-sm;
+  }
+}
+
 .logement {
   width: 100%;
   padding-bottom: $padding;
@@ -183,7 +200,14 @@ a {
     width: 100%;
     box-sizing: border-box;
     gap: $gap;
-    padding-bottom: $padding;
+    padding: $padding;
+    padding-top: 0;
+
+    @include breakpoint-mobile {
+      flex-direction: column;
+      padding: 0 $padding-sm $padding-sm;
+      gap: $gap-sm;
+    }
 
     &__left,
     &__right {
@@ -192,10 +216,20 @@ a {
       box-sizing: border-box;
       gap: $gap-sm;
       width: calc(50% - #{$padding-sm});
+
+      @include breakpoint-mobile {
+        width: 100%;
+        gap: $gap-xs;
+      }
     }
 
     &__right {
       align-items: end;
+      @include breakpoint-mobile {
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        padding: 0;
+      }
     }
 
     // left content
@@ -207,12 +241,26 @@ a {
       font-size: 36px;
       color: $main-color;
       font-weight: 500;
+
+      @include breakpoint-mobile {
+        font-size: 18px;
+        line-height: 1.5;
+      }
     }
-    &location {
+    &__location {
+      @include breakpoint-mobile {
+        font-size: 14px;
+      }
     }
     &__tags {
       display: flex;
+      flex-wrap: wrap;
       gap: $gap-sm;
+
+      @include breakpoint-mobile {
+        gap: $gap-xs;
+      }
+
       button {
         border-radius: 10px;
         font-size: 14px;
@@ -224,6 +272,10 @@ a {
         color: $text-light;
         background-color: $main-color;
         border: none;
+
+        @include breakpoint-mobile {
+          font-size: 10px;
+        }
       }
     }
     // right content
@@ -234,15 +286,32 @@ a {
       gap: $gap-xs;
       padding-top: $padding-sm;
 
+      @include breakpoint-mobile {
+        width: 100%;
+        padding-top: 0;
+        font-size: 12px;
+        width: fit-content;
+      }
+
       p {
         text-align: right;
         color: $main-color;
+
+        @include breakpoint-mobile {
+          margin: 0;
+        }
       }
       img {
         border-radius: 100%;
         width: 64px;
         height: 64px;
         margin-left: $padding-sm;
+
+        @include breakpoint-mobile {
+          width: 32px;
+          height: 32px;
+          margin-left: 0;
+        }
       }
     }
   }
@@ -256,6 +325,10 @@ a {
   //
   .dropdown__toggle {
     font-size: 18px;
+
+    @include breakpoint-mobile {
+      font-size: 13px;
+    }
   }
 }
 

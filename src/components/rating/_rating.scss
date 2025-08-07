@@ -2,8 +2,19 @@
   display: flex;
   align-items: center;
   gap: $gap-sm;
+
+  @include breakpoint-mobile {
+    gap: $gap-xs;
+    padding: 0;
+  }
+
   &__star {
     width: 24px;
     height: 24px;
+
+    @include breakpoint-mobile {
+      width: 13px;
+      height: 13px;
+    }
   }
 }

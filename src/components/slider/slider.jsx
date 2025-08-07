@@ -25,10 +25,10 @@ export default function Slider() {
           <button onClick={nextSlide}>
             <img src="/src/assets/images/icons/arrow_right.svg" alt="arrow right" />
           </button>
+        </div>
           <div className="slider__counter">
             {index + 1} / {pictures.length}
           </div>
-        </div>
       )}
       <img src={pictures[index]} alt={logement.title} className="slider__image" />
     </div>
