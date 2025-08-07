@@ -5,7 +5,7 @@ import AboutData from "../data/about.json";
 
 function About() {
   return (
-    <div>
+    <div className="about">
       <Banner titre="" image="about" />
       <section className="valors-container">
         {AboutData.map((about, index) => (

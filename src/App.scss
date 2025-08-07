@@ -89,15 +89,34 @@ a {
 }
 
 // about
+.about {
+  @include breakpoint-mobile {
+    padding: $padding-sm;
+    gap: $gap-sm;
+  }
+}
+
 .valors-container {
   display: flex;
   flex-direction: column;
   gap: $gap;
   align-items: center;
+
+  @include breakpoint-mobile {
+    padding: 0;
+    padding-top: $padding-sm;
+    gap: $gap-sm;
+  }
+
   &__valor {
     width: 80%;
+
+    @include breakpoint-mobile {
+      width: 100%;
+    }
   }
 }
+
 // error
 .error {
   @include flex-center;

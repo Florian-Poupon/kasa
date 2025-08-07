@@ -13,8 +13,8 @@
 
   @include breakpoint-mobile {
     min-height: 110px;
-    height: 100%;
     box-shadow: none;
+    border-radius: $border-radius-sm;
   }
 
   &__overlay {
