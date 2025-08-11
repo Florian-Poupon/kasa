@@ -22,6 +22,11 @@
     &.open {
       transform: rotate(180deg);
     }
+    img {
+      @include breakpoint-mobile {
+        width: 18px;
+      }
+    }
   }
   .dropdown__content {
     width: 100%;

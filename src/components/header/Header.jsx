@@ -5,18 +5,18 @@ import { NavLink } from "react-router-dom";
 function Header() {
   return (
     <header className="header">
-      <Link to={"/"}>
+      <h1>
         <img src="/src/assets/images/logo.png" className="header__logo" alt="Logo" />
-      </Link>
+      </h1>
       <nav className="navigation">
         <ul>
           <li>
-            <NavLink to="/" className={({ isActive }) => "nav-link" + (isActive ? " a--active" : "")}>
+            <NavLink to="/" className={({ isActive }) => "nav-link" + (isActive ? " a--active" : "")} viewTransition>
               Accueil
             </NavLink>
           </li>
           <li>
-            <NavLink to="/about" className={({ isActive }) => "nav-link" + (isActive ? " a--active" : "")}>
+            <NavLink to="/about" className={({ isActive }) => "nav-link" + (isActive ? " a--active" : "")} viewTransition>
               À propos
             </NavLink>
           </li>

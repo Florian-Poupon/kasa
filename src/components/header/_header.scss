@@ -15,6 +15,7 @@
     width: 210px;
     @include breakpoint-mobile {
       width: 145px;
+      height: auto;
     }
   }
 }

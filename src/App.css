@@ -90,6 +90,9 @@ a {
   }
 }
 
+.about {
+  padding: 1.5rem;
+}
 @media (max-width: 768px) {
   .about {
     padding: 1.5rem;
@@ -189,6 +192,7 @@ a {
 .logement-page {
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: 0;
 }
 @media (max-width: 768px) {
@@ -361,6 +365,7 @@ a {
 @media (max-width: 768px) {
   .header__logo {
     width: 145px;
+    height: auto;
   }
 }
 
@@ -408,6 +413,10 @@ a {
   gap: 1rem;
   padding: 3rem;
   color: white;
+}
+.footer__footer_container img {
+  width: auto;
+  height: auto;
 }
 @media (max-width: 768px) {
   .footer__footer_container {
@@ -526,6 +535,11 @@ a {
 }
 .dropdown .dropdown__arrow.open {
   transform: rotate(180deg);
+}
+@media (max-width: 768px) {
+  .dropdown .dropdown__arrow img {
+    width: 18px;
+  }
 }
 .dropdown .dropdown__content {
   width: 100%;

@@ -11,6 +11,10 @@
     gap: $gap-sm;
     padding: $padding-lg;
     color: $text-light;
+    img {
+      width: auto;
+      height: auto;
+    }
 
     @include breakpoint-mobile {
       width: 122px;

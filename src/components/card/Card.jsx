@@ -5,10 +5,9 @@ export default function Card() {
   return (
     <section className="cardsGrid">
       {Logements.map((logement) => (
-        <Link to={`/logement/${logement.id}`}>
+        <Link key={logement.id} to={`/logement/${logement.id}`} viewTransition>
           <article
             className="card"
-            key={logement.id}
             style={{
               backgroundImage: `url(${logement.cover})`,
             }}

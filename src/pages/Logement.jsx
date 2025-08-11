@@ -23,7 +23,7 @@ export default function Logement() {
         {/* /left */}
         <div className="logement__infos__left">
           <div className="logement__infos__title-container">
-            <h1 className="logement__infos__title">{logement.title}</h1>
+            <h2 className="logement__infos__title">{logement.title}</h2>
             <p className="logement__infos__location">{logement.location}</p>
           </div>
           <div className="logement__infos__tags">

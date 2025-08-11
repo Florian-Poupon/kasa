@@ -90,6 +90,7 @@ a {
 
 // about
 .about {
+  padding: $padding-sm;
   @include breakpoint-mobile {
     padding: $padding-sm;
     gap: $gap-sm;
@@ -184,6 +185,7 @@ a {
 .logement-page {
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: 0;
   @include breakpoint-mobile {
     align-items: center;

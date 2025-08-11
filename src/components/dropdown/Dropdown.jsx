@@ -16,11 +16,7 @@ export default function Dropdown({ title, children }) {
         className="dropdown__content"
         ref={contentRef}
         style={{
-          maxHeight: open
-            ? contentRef.current
-              ? contentRef.current.scrollHeight + "px"
-              : "300px" // valeur par défaut fallback
-            : "0px",
+          maxHeight: open ? (contentRef.current ? contentRef.current.scrollHeight + "px" : "300px") : "0px",
         }}
         aria-hidden={!open}
       >
